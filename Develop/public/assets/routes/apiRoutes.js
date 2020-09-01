@@ -22,14 +22,14 @@ module.exports = function(app) {
     });
 
     app.delete('/api/notes/:id', (req, res) => {
-        const deleteId = req.params.id;
-       
-        notes.forEach((note) => {
-            if (note.id === deleteId) {
+        const deleteId = parseInt(req.params.id);
+
+        notes.forEach((note, index) => {
+            if (index === deleteId) {
                 const noteId = notes.indexOf(note);
                 notes.splice(noteId, 1);
             }
-        });
+          });
         
         fs.writeFileSync(path.join(__dirname,'../../../db/db.json'), JSON.stringify(notes), err => {
             if (err) {
