@@ -32,9 +32,7 @@ module.exports = function(app) {
           });
         
         fs.writeFileSync(path.join(__dirname,'../../../db/db.json'), JSON.stringify(notes), err => {
-            if (err) {
-            throw err
-            }
+            if (err) throw err;
         });
         res.json(notes);
     });
