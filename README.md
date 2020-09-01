@@ -5,11 +5,7 @@
   Table of Contents
   1. [About](#about)
   2. [Installing](#installing)
-  3. [Usage](#usage)
   4. [License](#license)
-  5. [Contributing](#contributing)
-  6. [Tests](#Tests)
-  7. [Contact Information](#Questions)
 
   ## About
   Application used to write, save and delete notes. 
